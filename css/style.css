@@ -1,0 +1,150 @@
+body
+{
+	height: 100%;
+	overflow-x: hidden;
+}
+.header
+{
+	background-color: #1E90FF;
+	height: 50px;
+	margin-top: 0px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.header img
+{
+	height: 40px;
+	float: left;
+	display: inline-block;
+	margin-top: 5px;
+}
+.header font
+{
+	float: right;
+	font-size: 17px;
+	margin-top: 10px;
+	font-weight: bold;
+	color:white;
+	font-family: 'Righteous', cursive;
+	letter-spacing: 2px;
+}
+.maincont
+{
+	padding: 10px;
+	background-color:white;
+	min-height: 100%;
+}
+.maincont div
+{
+	min-height: 50px;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: -10px;
+}
+.maincont div h3
+{
+	background-color: #2B5B79;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border-radius: 2px;
+	width: 11%;
+	font-size: 14px;
+	display: inline-block;
+}
+.maincont div h3 p
+{
+	display: inline-block;
+}
+.txt-sml
+{
+	width: 16.6%;
+	height: 40px;
+	display: inline-block;
+	border:0px;
+	border-bottom: 2px solid #616161;
+	margin-top: 15px;
+	font-family: 'Righteous', cursive;
+}
+.txt-sml:focus
+{
+	outline: none;
+}
+::-webkit-input-placeholder 
+{
+  color: #8F8F8F;
+  font-size: 16px;
+  font-family: 'Righteous', cursive;
+  font-weight: lighter;
+}
+::-moz-placeholder 
+{
+  color: #8F8F8F;
+  font-size: 16px;
+  font-family: 'Righteous', cursive;
+  font-weight: lighter;
+}
+:-ms-input-placeholder 
+{
+  color: #8F8F8F;
+  font-size: 16px;
+  font-family: 'Righteous', cursive;
+  font-weight: lighter;
+}
+:-moz-placeholder 
+{
+  color: #8F8F8F;
+  font-size: 16px;
+  font-family: 'Righteous', cursive;
+  font-weight: lighter;
+}
+
+.result-sml
+{
+	height: 40px;
+	width: 16.6%;
+	display: inline-block;
+	background-color: #EDEDED;
+	text-align: center;
+	padding-top: 10px;
+	color: #BABABA;
+}
+#calc_button
+{
+	margin: auto;
+	height: 35px;
+	width: auto;
+	padding:10px;
+	border:0px;
+	background-color: #086375;
+	color: white;
+	border-radius: 2px;
+}
+#calc_button:hover
+{
+	outline: none;
+}
+#result_cont
+{
+	font-family: 'Righteous', cursive;
+	margin-top: 10px;
+	font-size: 15px;
+}
+#reset
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #EE3B3B;
+	border:0px;
+	position: fixed;
+	right: 20px;
+	top: 40%;
+	color: white;
+}
+#reset:focus
+{
+	outline: none;
+}

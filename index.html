@@ -1,0 +1,216 @@
+<html>
+<head>
+	<title>
+		Bank Calculator
+	</title>
+
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="theme-color" content="#1E90FF">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="icon" type="image/png" href="images/logo-512.png">
+</head>
+
+<body>
+
+	<div class="header">
+		<img src="images/logo-512.png" class="logo" alt="Logo">
+		<font>BanCulator</font>
+	</div>
+
+	<button id="reset" onclick="window.open(document.URL,'_self');"><i class="fas fa-sync-alt"></i></button>
+	<!-- 12 types of denomination -->
+	<div class="maincont">
+		<div class="div2000">
+			<form oninput="calc2000()" name="form2000">
+				<h3><p><i class="fas fa-rupee-sign"></i> 2000</p></h3>
+
+				<input type="number" id="bundle2000" class="txt-sml" placeholder="Bundle" maxlength="5" onKeyup="autotab(this, document.getElementById('packet2000'))">
+
+
+				<input type="number" id="packet2000" class="txt-sml" placeholder="Packet" onKeyup="autotab(this, document.getElementById('loose2000'))"  maxlength = "1">
+
+
+				<input type="number" id="loose2000" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle500'))">
+
+				<p class="result-sml" id="sl2000">Single Lock</p> <p class="result-sml" id="tot2000">Total</p>
+			</form>
+		</div>
+
+		<div class="div500">
+			
+			<form oninput="calc500()" name="form2000">
+				<h3><p><i class="fas fa-rupee-sign"></i> 500</p></h3>
+				<input type="number" id="bundle500" class="txt-sml" placeholder="Bundle" onKeyup="autotab(this, document.getElementById('packet500'))" maxlength="5">
+
+
+				<input type="number" id="packet500" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose500'))">
+
+
+				<input type="number" id="loose500" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle200'))">
+
+
+				<p class="result-sml" id="sl500">Single Lock</p> <p class="result-sml" id="tot500">Total</p>
+			</form>
+		</div>
+
+		<div class="div200">
+			
+			<form oninput="calc200()">
+				<h3><p><i class="fas fa-rupee-sign"></i> 200</p></h3>
+				<input type="number" id="bundle200" class="txt-sml" placeholder="Bundle" onKeyup="autotab(this, document.getElementById('packet200'))" maxlength="5">
+				<input type="number" id="packet200" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose200'))">
+				<input type="number" id="loose200" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle100'))">
+				<p class="result-sml" id="sl200">Single Lock</p> <p class="result-sml" id="tot200">Total</p>
+			</form>
+			
+		</div>
+
+		<div class="div100">
+			
+			<form oninput="calc100()">
+				<h3><p><i class="fas fa-rupee-sign"></i> 100</p></h3>
+
+				<input type="number" id="bundle100" class="txt-sml" placeholder="Bundle" maxlength="5" onKeyup="autotab(this, document.getElementById('packet100'))">
+
+				<input type="number" id="packet100" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose100'))">
+
+				<input type="number" id="loose100" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle50'))">
+
+				<p class="result-sml" id="sl100">Single Lock</p> <p class="result-sml" id="tot100">Total</p>
+			</form>
+		</div>
+
+		<div class="div50">
+			
+			<form oninput="calc50()">
+				<h3><p><i class="fas fa-rupee-sign"></i> 50</p></h3>
+				<input type="number" id="bundle50" class="txt-sml" placeholder="Bundle" maxlength="5" onKeyup="autotab(this, document.getElementById('packet50'))">
+
+				<input type="number" id="packet50" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose50'))">
+
+				<input type="number" id="loose50" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle20'))">
+
+				<p class="result-sml" id="sl50">Single Lock</p> <p class="result-sml" id="tot50">Total</p>
+			</form>
+			
+		</div>
+
+		<div class="div20">
+			
+			<form oninput="calc20()">
+				<h3><p><i class="fas fa-rupee-sign"></i> 20</p></h3>
+				<input type="number" id="bundle20" class="txt-sml" placeholder="Bundle" maxlength="5" onKeyup="autotab(this, document.getElementById('packet20'))">
+				<input type="number" id="packet20" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose20'))">
+				<input type="number" id="loose20" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle10'))">
+				<p class="result-sml" id="sl20">Single Lock</p> <p class="result-sml" id="tot20">Total</p>
+			</form>
+		</div>
+
+		<div class="div10">
+			
+			<form oninput="calc10()">
+				<h3><p><i class="fas fa-rupee-sign"></i> 10</p></h3>
+				<input type="number" id="bundle10" class="txt-sml" placeholder="Bundle" maxlength="5" onKeyup="autotab(this, document.getElementById('packet10'))">
+
+				<input type="number" id="packet10" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose10'))">
+
+				<input type="number" id="loose10" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle5'))">
+
+				<p class="result-sml" id="sl10">Single Lock</p> <p class="result-sml" id="tot10">Total</p>
+			</form>
+			
+		</div>
+
+		<div class="div5">
+			
+			<form oninput="calc5()">
+				<h3><p><i class="fas fa-rupee-sign"></i> 5</p></h3>
+				<input type="number" id="bundle5" class="txt-sml" placeholder="Bundle" maxlength="5" onKeyup="autotab(this, document.getElementById('packet5'))">
+				<input type="number" id="packet5" class="txt-sml" placeholder="Packet" maxlength="1" onKeyup="autotab(this, document.getElementById('loose5'))" >
+				<input type="number" id="loose5" class="txt-sml" placeholder="Loose" maxlength="2" onKeyup="autotab(this, document.getElementById('bundle10coin'))">
+				<p class="result-sml" id="sl5">Single Lock</p> <p class="result-sml" id="tot5">Total</p>
+			</form>
+			
+		</div>
+
+
+		<div class="div10coin">
+			<h3><p>10 Coin</p></h3>
+			
+			<input type="number" id="bundle10coin" class="txt-sml" placeholder="Coins" oninput="calc10coin()">
+				
+			<p class="result-sml" id="packet10coin">Total</p>
+		</div>
+
+		<div class="div5coin">
+			<h3><p>5 Coin</p></h3>
+			<input type="number" id="bundle5coin" class="txt-sml" placeholder="Coins" oninput="calc5coin()">
+			<p class="result-sml" id="packet5coin">Total</p>
+		</div>
+
+		<div class="div2coin">
+			<h3><p>2 Coin</p></h3>
+				<input type="number" id="bundle2coin" class="txt-sml" placeholder="Coins" oninput="calc2coin()">
+			<p class="result-sml" id="packet2coin">Total</p>
+		</div>
+
+		<div class="div1coin">
+			<h3><p>1 Coin</p></h3>
+				<input type="number" id="bundle1coin" class="txt-sml" placeholder="Coins" oninput="calc1coin()">
+			<p class="result-sml" id="packet1coin">Total</p>
+		</div>
+
+
+		<div class="results">
+			<h3><p>End Results</p></h3>
+
+			<button onclick="calculate_all()" id="calc_button">Calculate Results</button>
+			<p id="result_cont">
+			</p>
+		</div>
+		
+	</div>
+</body>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script>
+		function autotab(current,to)
+		{
+    		if (current.getAttribute && current.value.length==current.getAttribute("maxlength")) 
+    		{
+        		to.focus();
+        	}
+		}
+</script>
+
+<script>
+if('serviceWorker' in navigator) {
+            navigator.serviceWorker
+           .register('./serviceWorker.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
+</script>
+
+</html>
